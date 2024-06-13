@@ -1,0 +1,1453 @@
+{
+	"info": {
+		"_postman_id": "f74c5b5a-d24d-440d-9e5a-39577bd93a6f",
+		"name": "Rest API Immo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23382205"
+	},
+	"item": [
+		{
+			"name": "Department",
+			"item": [
+				{
+					"name": "Get All Department",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/dept/departement",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dept",
+								"departement"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/dept/departement",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dept",
+										"departement"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "184"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"b8-hzKC6qstlxESP2Ad+1urtVsq9X4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 07:52:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"results\": 1,\n    \"data\": [\n        {\n            \"id\": 1,\n            \"nama_department\": \"Fullstack Engineer\",\n            \"createdAt\": \"2024-06-13T07:30:42.385Z\",\n            \"updatedAt\": \"2024-06-13T07:32:13.171Z\",\n            \"deletedAt\": null\n        }\n    ]\n}"
+						}
+					]
+				},
+				{
+					"name": "Get One Department",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/dept/departement",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"dept",
+								"departement"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/dept/departement/1",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dept",
+										"departement",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "170"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"aa-HMDXR/9QBth0kxdKH0ReFwy1DBg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 07:52:57 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 1,\n        \"nama_department\": \"Fullstack Engineer\",\n        \"createdAt\": \"2024-06-13T07:30:42.385Z\",\n        \"updatedAt\": \"2024-06-13T07:32:13.171Z\",\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Department",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/departement",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departement"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/dept/departement",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dept",
+										"departement"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "171"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"ab-7dqi9JlxUxPUqIq6VS/bcymyiGY\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 07:54:19 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": 2,\n        \"nama_department\": \"Fullstack Developer\",\n        \"updatedAt\": \"2024-06-13T07:54:19.044Z\",\n        \"createdAt\": \"2024-06-13T07:54:19.044Z\",\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"BackEnd Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/departement/2",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departement",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"BackEnd Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/dept/departement/2",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dept",
+										"departement",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-2jv/utfMzSqRYHGQE0h3nmdd42E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 07:55:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"2\",\n        \"nama_department\": \"BackEnd Developer\"\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Department",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"BackEnd Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/departement/2",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"departement",
+								"2"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"BackEnd Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/dept/departement/2",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"dept",
+										"departement",
+										"2"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "76"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"4c-2jv/utfMzSqRYHGQE0h3nmdd42E\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 07:55:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"success\",\n    \"data\": {\n        \"id\": \"2\",\n        \"nama_department\": \"BackEnd Developer\"\n    }\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Jabatan",
+			"item": [
+				{
+					"name": "Get All Jabatan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/jabatan",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jabatan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{check_server}}/api/v1/jab/jabatan",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"jab",
+										"jabatan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "299"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12b-90PFLlBZQTOHFNzjPxlACT5/Vmc\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 08:45:07 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 1,\n        \"id_department\": 1,\n        \"nama_jabatan\": \"IT\",\n        \"createdAt\": \"2024-06-13T08:04:38.289Z\",\n        \"updatedAt\": \"2024-06-13T08:04:38.289Z\",\n        \"deletedAt\": null,\n        \"department\": {\n            \"id\": 1,\n            \"nama_department\": \"Fullstack Engineer\",\n            \"createdAt\": \"2024-06-13T07:30:42.385Z\",\n            \"updatedAt\": \"2024-06-13T07:32:13.171Z\",\n            \"deletedAt\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get One Jabatan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/jabatan/1",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jabatan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/jab/jabatan/1",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"jab",
+										"jabatan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "297"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"129-Q1UVFcTL7cJMphzDRP1zInb1Rqo\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 08:44:55 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_department\": 1,\n    \"nama_jabatan\": \"IT\",\n    \"createdAt\": \"2024-06-13T08:04:38.289Z\",\n    \"updatedAt\": \"2024-06-13T08:04:38.289Z\",\n    \"deletedAt\": null,\n    \"department\": {\n        \"id\": 1,\n        \"nama_department\": \"Fullstack Engineer\",\n        \"createdAt\": \"2024-06-13T07:30:42.385Z\",\n        \"updatedAt\": \"2024-06-13T07:32:13.171Z\",\n        \"deletedAt\": null\n    }\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Jabatan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_department\":1,\r\n    \"nama_jabatan\":\"IT\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/jabatan",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jabatan"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Update Department",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"id_department\":1,\r\n    \"nama_jabatan\":\"Finance\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/jabatan/1",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jabatan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "success",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"id_department\":1,\r\n    \"nama_jabatan\":\"Finance\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/jab/jabatan/1",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"jab",
+										"jabatan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "146"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"92-kkZnAcloFc1WXCg5nOjfNtGmMtg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 08:46:51 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_department\": 1,\n    \"nama_jabatan\": \"Finance\",\n    \"createdAt\": \"2024-06-13T08:04:38.289Z\",\n    \"updatedAt\": \"2024-06-13T08:46:50.822Z\",\n    \"deletedAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Jabatan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "{{check_server}}/api/v1/jabatan/1",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"jabatan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Karyawan",
+			"item": [
+				{
+					"name": "Get All Karyawan",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{check_server}}/api/v1/karyawan",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"karyawan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get All Karyawan",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{check_server}}/api/v1/karyawan",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"karyawan"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "358"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"166-990SltZYLhpx2wFaP9mZWwmucpk\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 09:17:40 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "[\n    {\n        \"id\": 3,\n        \"id_jabatan\": 2,\n        \"name\": \"Fauzan\",\n        \"age\": 22,\n        \"gender\": \"L\",\n        \"tanggal_lahir\": \"2002-01-21\",\n        \"alamat\": \"Cirebon\",\n        \"createdAt\": \"2024-06-13T09:17:33.634Z\",\n        \"updatedAt\": \"2024-06-13T09:17:33.634Z\",\n        \"deletedAt\": null,\n        \"jabatan\": {\n            \"id\": 2,\n            \"id_department\": 1,\n            \"nama_jabatan\": \"IT\",\n            \"createdAt\": \"2024-06-13T09:16:29.361Z\",\n            \"updatedAt\": \"2024-06-13T09:16:29.361Z\",\n            \"deletedAt\": null\n        }\n    }\n]"
+						}
+					]
+				},
+				{
+					"name": "Get One Karyawan",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/karyawan",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"karyawan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Get One Karyawan",
+							"originalRequest": {
+								"method": "GET",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nama_department\":\"Fullstack Developer\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/karyawan/1",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"karyawan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "222"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"de-nW+UMSPMXqWc6vnoP3YtwFUfeWg\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 09:14:47 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_jabatan\": null,\n    \"name\": \"Fauzan\",\n    \"age\": 22,\n    \"gender\": \"L\",\n    \"tanggal_lahir\": \"2002-01-21\",\n    \"alamat\": \"Cirebon\",\n    \"createdAt\": \"2024-06-13T09:12:59.495Z\",\n    \"updatedAt\": \"2024-06-13T09:12:59.495Z\",\n    \"deletedAt\": null,\n    \"jabatan\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Create Karyawan",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n   \"id_jabatan\":2,\r\n  \"name\": \"Fauzan\",\r\n  \"age\": 22,\r\n  \"gender\": \"L\",\r\n  \"tanggal_lahir\": \"2002-01-21\",\r\n  \"alamat\": \"Cirebon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/karyawan",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"karyawan"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Create Karyawan",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"id_jabatan\":2,\r\n  \"name\": \"Fauzan\",\r\n  \"age\": 22,\r\n  \"gender\": \"L\",\r\n  \"tanggal_lahir\": \"2002-01-21\",\r\n  \"alamat\": \"Cirebon\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/karyawan",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"karyawan"
+									]
+								}
+							},
+							"status": "Created",
+							"code": 201,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "204"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"cc-IxA9KI7bi1beJwhMog96RErAfu4\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 09:17:33 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 3,\n    \"id_jabatan\": 2,\n    \"name\": \"Fauzan\",\n    \"age\": 22,\n    \"gender\": \"L\",\n    \"tanggal_lahir\": \"2002-01-21\",\n    \"alamat\": \"Cirebon\",\n    \"updatedAt\": \"2024-06-13T09:17:33.634Z\",\n    \"createdAt\": \"2024-06-13T09:17:33.634Z\",\n    \"deletedAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Update Karyawan",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n  \"name\": \"Fauzan Fadilah\",\r\n  \"age\": 22,\r\n  \"gender\": \"L\",\r\n  \"tanggal_lahir\": \"2002-01-21\",\r\n  \"alamat\": \"Cirebon\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/karyawan/1",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"karyawan",
+								"1"
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Update Karyawan",
+							"originalRequest": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"name\": \"Fauzan Fadilah\",\r\n  \"age\": 22,\r\n  \"gender\": \"L\",\r\n  \"tanggal_lahir\": \"2002-01-21\",\r\n  \"alamat\": \"Cirebon\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/karyawan/1",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"karyawan",
+										"1"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "215"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"d7-Onn9pyyuwKx5/K8UeobgsH2mJgE\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 09:15:22 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"id\": 1,\n    \"id_jabatan\": null,\n    \"name\": \"Fauzan Fadilah\",\n    \"age\": 22,\n    \"gender\": \"L\",\n    \"tanggal_lahir\": \"2002-01-21\",\n    \"alamat\": \"Cirebon\",\n    \"createdAt\": \"2024-06-13T09:12:59.495Z\",\n    \"updatedAt\": \"2024-06-13T09:15:21.770Z\",\n    \"deletedAt\": null\n}"
+						}
+					]
+				},
+				{
+					"name": "Delete Karyawan",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"nama_department\":\"BackEnd Developer\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/karyawan/1",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"karyawan",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "signup",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"userType\":\"1\",\r\n    \"firstName\": \"Mochammad Fauzan\",\r\n    \"lastName\":\"Fadilah\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/auth/signup/",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signin",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{check_server}}/api/v1/auth/signin/",
+							"host": [
+								"{{check_server}}"
+							],
+							"path": [
+								"api",
+								"v1",
+								"auth",
+								"signin",
+								""
+							]
+						}
+					},
+					"response": [
+						{
+							"name": "Success",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/auth/signin/",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "168"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"a8-H5AMH5xJpYn3uu0/ieasQLsA4QI\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 04:56:31 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": \"Success\",\n    \"token\": \"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwiaWF0IjoxNzE4MjU0NTkxLCJleHAiOjE3MjYwMzA1OTF9.114F4Y76Z1JLE7Y329RxPrMOpCcpIjmRz49dz42QjMg\"\n}"
+						},
+						{
+							"name": "Error",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \r\n   \r\n    \"password\":\"123456\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{check_server}}/api/v1/auth/signin/",
+									"host": [
+										"{{check_server}}"
+									],
+									"path": [
+										"api",
+										"v1",
+										"auth",
+										"signin",
+										""
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "X-Powered-By",
+									"value": "Express"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "81"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"51-cBqjklx9zj74BeOPfp/jq1Q7F7I\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 13 Jun 2024 04:57:05 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"status\": 400,\n    \"message\": \"Failed Login Brooo...! Please Check Email and Password\"\n}"
+						}
+					]
+				}
+			]
+		},
+		{
+			"name": "Check Server",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"userType\":\"1\",\r\n    \"firstName\": \"Mochammad Fauzan\",\r\n    \"lastName\":\"Fadilah\",\r\n    \"email\":\"admin@gmail.com\",\r\n    \"password\":\"123456\",\r\n    \"confirmPassword\":\"123456\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{check_server}}",
+					"host": [
+						"{{check_server}}"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "check_server",
+			"value": "",
+			"type": "string"
+		}
+	]
+}
