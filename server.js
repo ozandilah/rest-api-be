@@ -12,6 +12,7 @@ app.use(express.urlencoded({ extended: true }));
 //all routes will be here
 app.use("/api/v1/auth", authRoute);
 
+// custom error handler
 app.use(
   "*",
   catchAsync(async (req, res, next) => {
